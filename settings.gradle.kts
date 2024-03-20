@@ -12,5 +12,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "StartupComposeTemplate"
+rootProject.name = "android-amity"
 include(":app")
