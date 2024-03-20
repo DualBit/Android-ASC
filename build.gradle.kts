@@ -7,6 +7,8 @@ buildscript {
     repositories {
         google()
         mavenCentral()
+        gradlePluginPortal()
+        maven(url = "https://jitpack.io")
     }
     dependencies {
         classpath("com.android.tools.build:gradle:${Versions.gradle}")
@@ -14,6 +16,17 @@ buildscript {
         classpath("com.google.dagger:hilt-android-gradle-plugin:${Versions.hilt}")
     }
 }
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+        maven(url = "https://jitpack.io")
+    }
+}
+
+apply("amity/buildsystem/dependencies.gradle")
 
 tasks {
     register("clean", Delete::class) {

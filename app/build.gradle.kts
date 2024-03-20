@@ -38,6 +38,7 @@ android {
             applicationId = AppConfiguration.application_id
             buildConfigField("String", "BASE_URL", "\"https://startup-compose-example/api/\"")
             resValue("string",  "app_name", "DEV-${AppConfiguration.application_name}")
+            buildConfigField("String", "amityApiKey", "\"b0e8ed0f3edaf3374831df1e525e16dc8301d8e2ec666c2f\"")
         }
 
         create("stag") {
@@ -46,6 +47,7 @@ android {
             applicationId = AppConfiguration.application_id
             buildConfigField("String", "BASE_URL", "\"https://startup-compose-example/api/\"")
             resValue("string",  "app_name", "STAG-${AppConfiguration.application_name}")
+            buildConfigField("String", "amityApiKey", "\"b0e8ed0f3edaf3374831df1e525e16dc8301d8e2ec666c2f\"")
         }
 
         create("prod") {
@@ -53,6 +55,7 @@ android {
             applicationId = AppConfiguration.application_id
             buildConfigField("String", "BASE_URL", "\"https://startup-compose-example/api/\"")
             resValue("string",  "app_name", AppConfiguration.application_name)
+            buildConfigField("String", "amityApiKey", "\"b0e9bd083a8ea5664a338f1b570b108c83588cb7ec603b29\"")
         }
     }
 
@@ -70,9 +73,11 @@ android {
     composeOptions {
         kotlinCompilerExtensionVersion = Versions.compose_compiler
     }
-    packagingOptions {
+    packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
+            excludes += "META-INF/INDEX.LIST"
+            excludes += "META-INF/io.netty.versions.properties"
         }
     }
 }

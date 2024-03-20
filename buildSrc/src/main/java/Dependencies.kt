@@ -3,7 +3,7 @@ import Versions.firebase_bom
 object Versions {
     const val kotlin = "1.9.20"
     const val hilt = "2.50"
-    const val gradle = "8.2.1"
+    const val gradle = "8.2.2"
 
     const val activity = "1.6.1"
 
