@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--    font    -->
+    <dimen name="ferrariExtraExtraLarge">62sp</dimen>
+
+    <dimen name="ferrariExtraLargeStat">52sp</dimen>
+
+    <dimen name="ferrariExtraLargeTitle">36sp</dimen>
+
+    <dimen name="ferrariLineUpStats">32sp</dimen>
+    <dimen name="ferrariPin">32sp</dimen>
+
+    <dimen name="ferrariLineUpTitle">29sp</dimen>
+
+    <dimen name="ferrariLineUpSubtitle">26sp</dimen>
+
+    <dimen name="ferrariDayTitle">22sp</dimen>
+    <dimen name="ferrariNewsTitle">22sp</dimen>
+    <dimen name="ferrariLargeTitle">22sp</dimen>
+
+    <dimen name="ferrariMediumBody">18sp</dimen>
+
+    <dimen name="ferrariCounter">17sp</dimen>
+    <dimen name="ferrariStats">17sp</dimen>
+    <dimen name="ferrariLargeBody">17sp</dimen>
+
+    <dimen name="ferrariNavigationTitle">16sp</dimen>
+    <dimen name="ferrariBody">16sp</dimen>
+    <dimen name="ferrariButtonBlock">16sp</dimen>
+
+    <dimen name="ferrariHeaderMedium">15sp</dimen>
+    <dimen name="ferrariHeader">15sp</dimen>
+    <dimen name="ferrariDefault">16sp</dimen>
+
+    <dimen name="ferrariNewsTitleSmall">14sp</dimen>
+    <dimen name="ferrariStandardButton">14sp</dimen>
+    <dimen name="ferrariEditorialBody">14sp</dimen>
+
+    <dimen name="ferrariCategoryButton">13sp</dimen>
+
+    <dimen name="ferrariSubheadLine">12sp</dimen>
+    <dimen name="ferrariCallout">12sp</dimen>
+    <dimen name="ferrariCaption">12sp</dimen>
+
+    <dimen name="ferrariProfileButton">11sp</dimen>
+    <dimen name="ferrariTab">11sp</dimen>
+
+    <dimen name="ferrariFooterTab">10sp</dimen>
+
+    <dimen name="ferrariFooter">9sp</dimen>
+
+    <dimen name="ferrariSmallFooter">8sp</dimen>
+
+    <dimen name="ferrariMinFooter">7sp</dimen>
+
+</resources>

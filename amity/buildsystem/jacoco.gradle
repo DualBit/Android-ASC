@@ -1,0 +1,6 @@
+
+tasks.whenTaskAdded { task ->
+    if (task.name.contains("test") || task.name.contains("Test")) {
+        task.enabled = true
+    }
+}
