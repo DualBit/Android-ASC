@@ -6,6 +6,13 @@ plugins {
 dependencies {
     android {
         namespace = "com.amity.socialcloud.uikit.chat"
+        packaging {
+            resources {
+                excludes += "/META-INF/{AL2.0,LGPL2.1}"
+                excludes += "META-INF/INDEX.LIST"
+                excludes += "META-INF/io.netty.versions.properties"
+            }
+        }
     }
     implementation(project(":common"))
 }

@@ -136,6 +136,11 @@ dependencies {
     implementation(GeoLocation.location)
     implementation(GeoLocation.accompaints_permission)
 
+    // Amity
+    implementation("com.github.AmityCo.Amity-Social-Cloud-SDK-Android:amity-push-fcm:6.26.0")
+    implementation(project(":amity-uikit"))
+//    implementation("org.objenesis:objenesis:3.2")
+
     testImplementation(TestLibs.junit)
     androidTestImplementation(AndroidXTestLibs.junit)
     androidTestImplementation(ComposeLibs.ui_test_junit4)

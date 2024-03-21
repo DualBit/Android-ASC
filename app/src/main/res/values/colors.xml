@@ -1,10 +1,245 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="colorPrimary">@color/background_color</color>
+    <color name="colorPrimaryVariant">@color/background_color</color>
+    <color name="colorPrimaryDark">@color/background_color</color>
+    <color name="colorOnPrimary">@color/text_color</color>
+
+    <color name="colorSecondary">@color/background_color</color>
+    <color name="colorSecondaryVariant">@color/background_color</color>
+    <color name="colorOnSecondary">@color/text_color</color>
+    <color name="seed">#da291c</color>
+    <color name="seed_alpha">#a0da291c</color>
+    <color name="md_theme_light_primary">#be0f09</color>
+    <color name="md_theme_light_onPrimary">#ffffff</color>
+    <color name="md_theme_light_primaryContainer">#ffdad4</color>
+    <color name="md_theme_light_onPrimaryContainer">#410000</color>
+    <color name="md_theme_light_secondary">#695f00</color>
+    <color name="md_theme_light_onSecondary">#ffffff</color>
+    <color name="md_theme_light_secondaryContainer">#58f9e534</color>
+    <color name="md_theme_light_onSecondaryContainer">#201c00</color>
+    <color name="md_theme_light_tertiary">#00696F</color>
+    <color name="md_theme_light_onTertiary">#ffffff</color>
+    <color name="md_theme_light_tertiaryContainer">#76f5ff</color>
+    <color name="md_theme_light_onTertiaryContainer">#002022</color>
+    <color name="md_theme_light_error">#ba1a1a</color>
+    <color name="md_theme_light_errorContainer">#ffdad6</color>
+    <color name="md_theme_light_onError">#ffffff</color>
+    <color name="md_theme_light_onErrorContainer">#410002</color>
+    <color name="md_theme_light_background">#f4feff</color>
+    <color name="md_theme_light_onBackground">#002022</color>
+    <color name="md_theme_light_surface">#f4feff</color>
+    <color name="md_theme_light_onSurface">#002022</color>
+    <color name="md_theme_light_surfaceVariant">#f5ddda</color>
+    <color name="md_theme_light_onSurfaceVariant">#534341</color>
+    <color name="md_theme_light_outline">#857370</color>
+    <color name="md_theme_light_inverseOnSurface">#c8faff</color>
+    <color name="md_theme_light_inverseSurface">#00363b</color>
+    <color name="md_theme_light_inversePrimary">#ffb4a8</color>
+    <color name="md_theme_light_shadow">#000000</color>
+    <color name="md_theme_light_surfaceTint">#be0f09</color>
+    <color name="md_theme_light_outlineVariant">#d8c2be</color>
+    <color name="md_theme_light_scrim">#000000</color>
+    <color name="md_theme_dark_primary">#ffb4a8</color>
+    <color name="md_theme_dark_onPrimary">#690000</color>
+    <color name="md_theme_dark_primaryContainer">#930001</color>
+    <color name="md_theme_dark_onPrimaryContainer">#ffdad4</color>
+    <color name="md_theme_dark_secondary">#58dbc90a</color>
+    <color name="md_theme_dark_onSecondary">#363100</color>
+    <color name="md_theme_dark_secondaryContainer">#4f4800</color>
+    <color name="md_theme_dark_onSecondaryContainer">#58f9e534</color>
+    <color name="md_theme_dark_tertiary">#4cd9e3</color>
+    <color name="md_theme_dark_onTertiary">#00363a</color>
+    <color name="md_theme_dark_tertiaryContainer">#004f54</color>
+    <color name="md_theme_dark_onTertiaryContainer">#76f5ff</color>
+    <color name="md_theme_dark_error">#ffb4ab</color>
+    <color name="md_theme_dark_errorContainer">#93000A</color>
+    <color name="md_theme_dark_onError">#690005</color>
+    <color name="md_theme_dark_onErrorContainer">#ffdad6</color>
+    <color name="md_theme_dark_background">#002022</color>
+    <color name="md_theme_dark_onBackground">#81f4ff</color>
+    <color name="md_theme_dark_surface">#002022</color>
+    <color name="md_theme_dark_onSurface">#81f4ff</color>
+    <color name="md_theme_dark_surfaceVariant">#534341</color>
+    <color name="md_theme_dark_onSurfaceVariant">#d8c2be</color>
+    <color name="md_theme_dark_outline">#a08c89</color>
+    <color name="md_theme_dark_inverseOnSurface">#002022</color>
+    <color name="md_theme_dark_inverseSurface">#81f4ff</color>
+    <color name="md_theme_dark_inversePrimary">#be0f09</color>
+    <color name="md_theme_dark_shadow">#000000</color>
+    <color name="md_theme_dark_surfaceTint">#ffb4a8</color>
+    <color name="md_theme_dark_outlineVariant">#534341</color>
+    <color name="md_theme_dark_scrim">#000000</color>
+    <!-- ================================================ -->
+
+
+    <!-- Segmented Button -->
+    <color name="default_text_color">#3e3e3d</color>
+    <color name="default_text_color_checked">#ffffff</color>
+    <color name="default_segment_color">#f8f8f8</color>
+    <color name="default_segment_color_checked">#da291c</color>
+    <color name="default_ripple_color">#e4e4e4</color>
+    <color name="default_ripple_color_checked">#8a8a8e</color>
+    <color name="default_border_color">#e4e4e4</color>
+
+    <!--  -->
+    <color name="background_universe_news">#f4f4f5</color>
+    <color name="black_alpha_08">#14000000</color>
+    <color name="color_success">#69d768</color>
+    <color name="background_icon_square_cta">#99DA291C</color>
+    <color name="bgColorDarkAlpha95">#F20C1017</color>
+
+    <color name="green">#2e7d32</color>
+
+    <color name="red">#d32f2f</color>
+    <color name="amber">#f88f08</color>
+    <color name="transparent_white">#00ffffff</color>
+    <color name="stories_title">#5a0b0f16</color>
+
+
+    <color name="green_ok">@color/color_success</color>
+    <color name="red_fault">#da291c</color>
+
+    <color name="ferrari_red">#da291c</color>
+
+    <color name="ferrari_red_alpha">#7ada291c</color>
+
+    <color name="ferrari_red_pastello">#d24d33</color>
+    <color name="ferrari_red_pastello_v2">#bc271a</color>
+    <color name="ferrari_yellow_pastello">#ffeb3b</color>
+
+    <color name="ferrari_yellow_pastello_alpha">#b2ffeb3b</color>
+
+    <color name="bar_color">#0C1017</color>
+
+    <color name="background_color">#f8f9fc</color>
+    <color name="background_color_shadow">#dddddd</color>
+    <color name="background_group_color">@color/white</color>
+
+    <color name="on_background_color">@color/black</color>
+
+    <color name="text_color">@color/black</color>
+    <color name="text_color_inverted">@color/white</color>
+
+    <color name="title_color">@color/light_black</color>
+    <color name="subtitle_color">@color/gray_medium</color>
+    <color name="subtitle_medium_color">@color/gray_medium</color>
+
+    <color name="normal_tab_item_color">#9A9A9A</color>
+
+    <color name="light_box_background">#d8d8d8</color>
+
+
+    <color name="progress_bar_on_light">#56d8d8d9</color>
+    <color name="progress_bar_on_dark">#54bebec1</color>
+
+    <color name="dark_box_background">@color/progress_bar_on_light</color>
+
+
+    <color name="text_shadow">#80000000</color>
+    <color name="card_shadow">#80000000</color>
+
+    <color name="light_black">#121212</color>
+    <color name="dark_grey_check">#353636</color>
+
+    <color name="dark">#252629</color>
+    <color name="dark_less">#343437</color>
+    <color name="gray_dark">#3c3c43</color>
+    <color name="dark_light">#404245</color>
+    <color name="gray_line">#757575</color>
+    <color name="gray_medium">#8a8a8e</color>
+    <color name="gray_card">#d3d3dc</color>
+    <color name="gray_light_full">#e4e5eb</color>
+    <color name="gray_light">#ebebf5</color>
+    <color name="gray_lighter">#efeff7</color>
+
+    <!--  -->
+
+    <color name="white">#FFFFFF</color>
+    <color name="white_alpha">#ccffffff</color>
+    <color name="white_dark">#91ffffff</color>
+
+    <color name="black">#000</color>
+
+    <color name="background_color_dark">#0c1017</color>
+
+    <color name="background_darkish">#1f2226</color>
+
+    <color name="background_color_connected_dark">#141518</color>
+    <color name="background_color_connected_dark_lighter">#2a2f34</color>
+
+    <color name="background_color_dark_alpha">#d90c1017</color>
+
+    <color name="background_red_button_gradient_start">@color/ferrari_red</color>
+    <color name="background_red_button_gradient_end">#B22015</color>
+
+    <color name="background_line_up_form_note">#0DFFFFFF</color>
+
+    <color name="color_header_news_detail">#80000000</color>
+    <color name="color_news_detail_category">#CCFFFFFF</color>
+
+    <color name="color_category_disabled">#999999</color>
+
+    <color name="place_holder">#38C7C7CD</color>
+    <color name="secondary_label">#91939C</color>
+    <color name="placeholder_login">#66BFBDBD</color>
+
+    <color name="pager_indicator_selected">@color/background_color_dark</color>
+    <color name="pager_indicator_unselected">#C3C3C5</color>
+
+    <color name="color_tab_item_dark">#66FFFFFF</color>
+    <color name="background_configuration_download_box">@color/black_alpha_08</color>
+
+    <color name="item_drive_background_color">#f1f2f5</color>
+    <color name="item_drive_stroke_color">#d8d9dc</color>
+
+    <color name="neumorphism_gray_stroke">#66bec2cf</color>
+
+    <color name="neumorphism_gray_checked">#cdd0da</color>
+    <color name="neumorphism_gray_unchecked">#dcdee5</color>
+
+    <color name="gray_medium_background">@color/background_color</color>
+
+    <color name="background_neumorphism_gray">#dcdee5</color>
+    <color name="background_neumorphism_gray_unchecked">#c3c5cc</color>
+    <color name="neumorphism_outer_shadow">#A6ABBD</color>
+
+    <color name="segment_selected">#FFFFFF</color>
+    <color name="segment_not_selected">#EEEEEF</color>
+
+    <color name="segment_text_color_checked">@color/text_color</color>
+    <color name="segment_text_color">@color/secondary_label</color>
+
+    <!-- ripple -->
+    <color name="ripple_checked">#242424</color>
+    <color name="ripple_unchecked">#fefefc</color>
+    <color name="ripple_toolbar_menu_icon">@color/ferrari_yellow_pastello_alpha</color>
+    <color name="light_blue_400">#FF29B6F6</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="gray_400">#FFBDBDBD</color>
+    <color name="gray_600">#FF757575</color>
+    <color name="ripple_light">#1C1C1F</color>
+
+    <color name="background_offline">@color/white</color>
+    <color name="background_splash">#181818</color>
+
+    <color name="background_charger">#EBECF0</color>
+
+    <color name="background_info_gradient_start">#17D8D8D8</color>
+    <color name="background_info_gradient_end">#05EEEEEE</color>
+
+    <color name="graph_separator">#EBECF0</color>
+
+    <!-- dark color -->
+    <color name="dark_background_color">#0c1017</color>
+    <color name="dark_text_color">@color/white</color>
+    <color name="dark_graph_separator">#2D3033</color>
+    <color name="dark_background_neumorphism_gray">#43474c</color>
+    <color name="dark_subtitle_medium_color">@color/gray_light</color>
+    <color name="dark_grey_color">#8A8A8E</color>
+
+    <!-- light dark color -->
+    <color name="light_dark_card_bg">#F1F1F3</color>
+    <color name="light_dark_grey_color">#8A8A8E</color>
+
 </resources>

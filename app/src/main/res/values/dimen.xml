@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="corner_radius_popup">40dp</dimen>
+    <dimen name="corner_radius_card_big">24dp</dimen>
+    <dimen name="corner_radius_alert">24dp</dimen>
+    <dimen name="corner_radius_button">12dp</dimen>
+    <dimen name="corner_radius_card">12dp</dimen>
+    <dimen name="corner_radius_8dp">8dp</dimen>
+    <dimen name="corner_radius_card_small">4dp</dimen>
+
+    <dimen name="card_elevation_low">4dp</dimen>
+    <dimen name="card_elevation_medium">8dp</dimen>
+    <dimen name="card_elevation_hight">16dp</dimen>
+
+    <dimen name="toolbar_height">60dp</dimen>
+    <dimen name="toolbar_horizontal_margin">30dp</dimen>
+
+    <!-- Button -->
+    <dimen name="button_height">50dp</dimen>
+
+    <!-- Tab Layout -->
+    <dimen name="tab_layout_indicator_height">1dp</dimen>
+    <dimen name="tab_layout_elevation">0dp</dimen>
+
+    <!-- Universal header -->
+    <dimen name="universal_header_height">40dp</dimen>
+    <dimen name="universal_header_title_height">24dp</dimen>
+    <dimen name="universal_header_subtitle_height">24dp</dimen>
+    <dimen name="universal_header_see_all_height">20dp</dimen>
+
+    <!-- Home -->
+    <dimen name="home_my_ferrari_configuration_card_width">360dp</dimen>
+    <dimen name="home_my_ferrari_configuration_card_height">250dp</dimen>
+    <dimen name="home_my_ferrari_configuration_card_placeholder_width">190dp</dimen>
+
+    <dimen name="home_my_ferrari_cars_height">510dp</dimen>
+
+    <dimen name="stroke_default_width">1dp</dimen>
+
+    <dimen name="margin_xxxl">64dp</dimen>
+    <dimen name="margin_xxl">48dp</dimen>
+    <dimen name="margin_xlp">40dp</dimen>
+    <dimen name="margin_xl">32dp</dimen>
+    <dimen name="margin_l">24dp</dimen>
+    <dimen name="margin_lm">20dp</dimen>
+    <dimen name="margin_m">16dp</dimen>
+    <dimen name="margin_h">12dp</dimen>
+    <dimen name="margin_s">8dp</dimen>
+    <dimen name="margin_sp">6dp</dimen>
+    <dimen name="margin_xs">4dp</dimen>
+    <dimen name="margin_xxs">2dp</dimen>
+
+    <dimen name="margin_tyres">64sp</dimen>
+
+    <!-- Entry view -->
+    <dimen name="entry_view_height_big">70dp</dimen>
+    <dimen name="entry_view_height_small">48dp</dimen>
+
+
+    <!-- Segmented Button -->
+    <dimen name="default_segment_height">48dp</dimen>
+    <dimen name="default_segment_text_size">16sp</dimen>
+    <dimen name="default_corner_radius">8dp</dimen>
+    <dimen name="default_border_width">1dp</dimen>
+    <dimen name="compound_drawable_size">24dp</dimen>
+    <!--  -->
+    <!-- Connected -->
+    <dimen name="connected_detail_tab_width">76dp</dimen>
+
+    <!-- Trips -->
+    <dimen name="trips_share_tab_width">84dp</dimen>
+
+<!--    &lt;!&ndash; ImageCheckView &ndash;&gt;-->
+<!--    <dimen name="image_check_view_card_margin">@dimen/_5sdp</dimen>-->
+<!--    <dimen name="image_check_view_card_width">@dimen/_39sdp</dimen>&lt;!&ndash; image_check_view_width-2*image_check_view_card_margin &ndash;&gt;-->
+<!--    <dimen name="image_check_view_card_height">@dimen/image_check_view_card_width</dimen>-->
+<!--    <dimen name="image_check_view_card_image_margin">@dimen/_8sdp</dimen>-->
+
+<!--    <dimen name="image_check_view_text_size">@dimen/_7ssp</dimen>&lt;!&ndash; image_check_view_card_height + 2*image_check_view_card_margin&ndash;&gt;-->
+
+<!--    <dimen name="image_check_view_alert_width">@dimen/_11sdp</dimen>&lt;!&ndash; width of the alert icon &ndash;&gt;-->
+    <!-- -->
+
+    <dimen name="drive_tag_view_height">36dp</dimen>
+    <dimen name="drive_tag_view_icon_padding">6dp</dimen>
+
+    <dimen name="drive_drive_type_view_height">36dp</dimen>
+
+
+</resources>

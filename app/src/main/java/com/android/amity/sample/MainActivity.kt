@@ -21,7 +21,6 @@ import javax.inject.Inject
 class MainActivity : ComponentActivity() {
     @Inject
     lateinit var eventManager: EventManager
-
     @Inject
     lateinit var networkMonitor: INetworkManager
     override fun onCreate(savedInstanceState: Bundle?) {

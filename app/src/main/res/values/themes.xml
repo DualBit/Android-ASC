@@ -1,7 +1,545 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
-    <style name="StartupComposeTemplate" parent="android:Theme.Material.Light.NoActionBar">
-        <item name="android:statusBarColor">@color/purple_700</item>
+    <style name="Theme.MyFerrari" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/md_theme_light_primary</item>
+        <item name="colorOnPrimary">@color/md_theme_light_onPrimary</item>
+        <item name="colorPrimaryContainer">@color/md_theme_light_primaryContainer</item>
+        <item name="colorOnPrimaryContainer">@color/md_theme_light_onPrimaryContainer</item>
+        <item name="colorSecondary">@color/md_theme_light_secondary</item>
+        <item name="colorOnSecondary">@color/md_theme_light_onSecondary</item>
+        <item name="colorSecondaryContainer">@color/md_theme_light_secondaryContainer</item>
+        <item name="colorOnSecondaryContainer">@color/md_theme_light_onSecondaryContainer</item>
+        <item name="colorTertiary">@color/md_theme_light_tertiary</item>
+        <item name="colorOnTertiary">@color/md_theme_light_onTertiary</item>
+        <item name="colorTertiaryContainer">@color/md_theme_light_tertiaryContainer</item>
+        <item name="colorOnTertiaryContainer">@color/md_theme_light_onTertiaryContainer</item>
+        <item name="colorError">@color/md_theme_light_error</item>
+        <item name="colorErrorContainer">@color/md_theme_light_errorContainer</item>
+        <item name="colorOnError">@color/md_theme_light_onError</item>
+        <item name="colorOnErrorContainer">@color/md_theme_light_onErrorContainer</item>
+        <item name="android:colorBackground">@color/md_theme_light_background</item>
+        <item name="colorOnBackground">@color/md_theme_light_onBackground</item>
+        <item name="colorSurface">@color/md_theme_light_surface</item>
+        <item name="colorOnSurface">@color/md_theme_light_onSurface</item>
+        <item name="colorSurfaceVariant">@color/md_theme_light_surfaceVariant</item>
+        <item name="colorOnSurfaceVariant">@color/md_theme_light_onSurfaceVariant</item>
+        <item name="colorOutline">@color/md_theme_light_outline</item>
+        <item name="colorOnSurfaceInverse">@color/md_theme_light_inverseOnSurface</item>
+        <item name="colorSurfaceInverse">@color/md_theme_light_inverseSurface</item>
+        <item name="colorPrimaryInverse">@color/md_theme_light_inversePrimary</item>
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:navigationBarColor">@color/bar_color</item>
+        <item name="android:statusBarColor" >@color/bar_color</item>
+        <item name="android:textSize">@dimen/ferrariDefault</item>
+        <item name="android:windowActivityTransitions">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowAllowEnterTransitionOverlap">false</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:textCursorDrawable">@drawable/custom_cursor</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="checkboxStyle">@style/Widget.App.CheckBox</item>
+        <item name="radioButtonStyle">@style/Widget.App.RadioButton</item>
+        <item name="textAppearanceSubtitle1">@style/AppTheme.App.Subtitle1</item>
+        <item name="textAppearanceCaption">@style/AppTheme.App.Caption1</item>
+        <item name="shapeAppearanceSmallComponent">@style/AppTheme.Shape.SmallComponent</item>
+    </style>
+
+    <style name="Theme.Activity" parent="@style/Theme.MyFerrari">
+        <item name="android:windowBackground">@drawable/background_activity</item>
+        <item name="android:windowSplashScreenAnimatedIcon" tools:targetApi="s">@drawable/fg_splash_logo</item>
+    </style>
+
+    <style name="Theme.Activity.Dialog" parent="Theme.Material3.DayNight.Dialog">
+        <!-- Customize your theme here. -->
+        <item name="windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="Widget.App.Dialog.FullScreen" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowEnterAnimation">@null</item>
+        <item name="android:windowExitAnimation">@null</item>
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+
+    <style name="Widget.App.Dialog.ForMe.FullScreen" parent="Widget.App.Dialog.FullScreen">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:windowIsFloating">false</item>
+    </style>
+
+    <style name="Widget.App.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="materialThemeOverlay">@style/AppTheme.TextInputLayout</item>
+        <item name="hintTextColor">?attr/colorOnSurface</item>
+        <item name="colorOnSurface">@color/ferrari_red</item>
+    </style>
+
+    <style name="Widget.App.CheckBox" parent="Widget.Material3.CompoundButton.CheckBox">
+        <item name="colorOnSurface">@color/ferrari_red</item>
+        <item name="colorSecondary">@color/ferrari_red</item>
+        <item name="android:paddingStart">4dp</item>
+    </style>
+
+    <style name="Widget.App.RadioButton" parent="Widget.Material3.CompoundButton.RadioButton">
+        <item name="buttonTint">@color/ferrari_red</item>
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:paddingStart">4dp</item>
+        <item name="android:fontFamily">@font/ferrari_sans_regular</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="Widget.App.CircleImage" parent="">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="DatePicker.ButtonNegative" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/text_color</item>
+    </style>
+
+    <style name="DatePicker.ButtonPositive" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/ferrari_red</item>
+    </style>
+
+    <style name="Widget.App.DatePickerStyle" parent="Theme.MaterialComponents.DayNight.Dialog">
+        <item name="colorPrimary">@color/ferrari_red</item>
+        <item name="colorPrimaryDark">@color/ferrari_red</item>
+        <item name="colorAccent">@color/ferrari_red</item>
+        <item name="android:buttonBarNegativeButtonStyle">@style/DatePicker.ButtonNegative</item>
+        <item name="android:buttonBarPositiveButtonStyle">@style/DatePicker.ButtonPositive</item>
+    </style>
+
+
+    <style name="AppTheme.Switch" parent="">
+        <item name="colorOnSurface">#eeeeee</item>
+        <item name="colorSecondary">@color/ferrari_red</item>
+    </style>
+
+    <style name="AppTheme.TextInputLayout" parent="">
+        <item name="colorError">@color/ferrari_red</item>
+        <item name="hintTextColor">?attr/colorOnSurface</item>
+    </style>
+    <!--- Text styling -->
+    <style name="AppTheme.App.Subtitle1" parent="TextAppearance.Material3.ActionBar.Subtitle">
+        <item name="fontFamily">@font/ferrari_sans_medium</item>
+        <item name="android:fontFamily">@font/ferrari_sans_medium</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/text_color</item>
+    </style>
+
+    <style name="AppTheme.App.Caption1" parent="TextAppearance.Material3.BodySmall">
+        <item name="fontFamily">@font/ferrari_sans_medium</item>
+        <item name="android:fontFamily">@font/ferrari_sans_medium</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/text_color</item>
+    </style>
+
+    <style name="AppTheme.Shape.LargeComponent" parent="ShapeAppearance.Material3.LargeComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">24dp</item>
+    </style>
+
+    <style name="AppTheme.Shape.MediumComponent" parent="ShapeAppearance.Material3.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12dp</item>
+    </style>
+
+    <style name="AppTheme.Shape.SmallComponent" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8dp</item>
+    </style>
+    <!---  -->
+
+
+    <style name="MyFerrariStandardEditText" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="colorControlActivated">@color/ferrari_red</item>
+        <item name="colorPrimary">@color/ferrari_red</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/ferrari_sans_regular</item>
+    </style>
+
+
+    <style name="AppTheme.TabLayout" parent="Widget.Material3.TabLayout">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="tabIndicatorColor">@color/ferrari_red</item>
+        <item name="tabIndicatorHeight">@dimen/tab_layout_indicator_height</item>
+        <item name="tabSelectedTextColor">@color/ferrari_red</item>
+        <item name="tabTextAppearance">@style/ferrariNewsTitleSmall</item>
+        <item name="android:elevation">@dimen/tab_layout_elevation</item>
+    </style>
+
+    <style name="categoryFilterText" parent="TextAppearance.MaterialComponents.Chip">
+        <item name="android:textSize">13sp</item>
+        <item name="android:fontFamily">@font/ferrari_sans_regular</item>
+    </style>
+    <!--    region ButtonStandard-->
+
+    <style name="ButtonStandardDark" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/bg_btn_standard_dark</item>
+        <item name="android:fontFamily">@font/ferrari_sans_regular</item>
+        <item name="android:textSize">@dimen/ferrariStandardButton</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="ButtonStandardFill" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/bg_btn_standard_fill</item>
+        <item name="android:fontFamily">@font/ferrari_sans_regular</item>
+        <item name="android:textSize">@dimen/ferrariStandardButton</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="ButtonStandard" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/bg_btn_standard</item>
+        <item name="android:fontFamily">@font/ferrari_sans_regular</item>
+        <item name="android:textSize">@dimen/ferrariStandardButton</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="ButtonStandardWhite" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/bg_btn_white</item>
+        <item name="android:fontFamily">@font/ferrari_sans_regular</item>
+        <item name="android:textSize">@dimen/ferrariStandardButton</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="ButtonWhite" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/bg_btn_white</item>
+        <item name="android:fontFamily">@font/ferrari_sans_regular</item>
+        <item name="android:textSize">@dimen/ferrariStandardButton</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="ButtonStandardRed" parent="Widget.AppCompat.Button">
+        <item name="android:textColor">@color/ferrari_red</item>
+        <item name="android:background">@drawable/bg_btn_standard_red</item>
+        <item name="android:fontFamily">@font/ferrari_sans_regular</item>
+        <item name="android:textSize">@dimen/ferrariStandardButton</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="ButtonStandardLight" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/bg_btn_standard_light</item>
+        <item name="android:fontFamily">@font/ferrari_sans_regular</item>
+        <item name="android:textSize">@dimen/ferrariStandardButton</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="ButtonStandardLightGradient" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/bg_btn_standard_light_gradient</item>
+        <item name="android:fontFamily">@font/ferrari_sans_regular</item>
+        <item name="android:textSize">@dimen/ferrariStandardButton</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!--    endregion ButtonStandard-->
+
+    <!--    region ButtonBlock-->
+    <style name="ButtonBlockWhite" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/bg_btn_standard_dark</item>
+        <item name="android:fontFamily">@font/ferrari_sans_regular</item>
+        <item name="android:textSize">@dimen/ferrariButtonBlock</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="ButtonBlockRed" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/bg_btn_standard_red</item>
+        <item name="android:fontFamily">@font/ferrari_sans_regular</item>
+        <item name="android:textSize">@dimen/ferrariButtonBlock</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!--    endregion ButtonBlock-->
+
+    <!--    region ButtonVehicleSummary-->
+    <style name="ButtonVehicleSummary" parent="Widget.AppCompat.Button">
+        <item name="android:textColor">@color/dark_text_color</item>
+        <item name="android:background">@drawable/bg_btn_square</item>
+        <item name="android:fontFamily">@font/ferrari_sans_regular</item>
+        <item name="android:textSize">@dimen/ferrariTab</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!--    endregion ButtonVehicleSummary-->
+
+    <!--  font  -->
+    <style name="ferrariExtraExtraLarge">
+        <item name="android:fontFamily">@font/ferrari_sans_bold</item>
+        <item name="android:textSize">@dimen/ferrariExtraExtraLarge</item>
+    </style>
+
+    <style name="ferrariExtraLargeStat">
+        <item name="android:fontFamily">@font/ferrari_sans_medium</item>
+        <item name="android:textSize">@dimen/ferrariExtraLargeStat</item>
+    </style>
+
+    <style name="ferrariExtraLargeTitle">
+        <item name="android:fontFamily">@font/ferrari_sans_medium</item>
+        <item name="android:textSize">@dimen/ferrariExtraLargeTitle</item>
+    </style>
+
+    <style name="ferrariSmallTitle">
+        <item name="android:fontFamily">@font/ferrari_sans_medium</item>
+        <item name="android:textSize">@dimen/ferrariCaption</item>
+    </style>
+
+    <style name="ferrariLineUpStats">
+        <item name="android:fontFamily">@font/ferrari_sans_bold</item>
+        <item name="android:textSize">@dimen/ferrariLineUpStats</item>
+    </style>
+
+    <style name="ferrariLineUpTitle">
+        <item name="android:fontFamily">@font/ferrari_sans_bold</item>
+        <item name="android:textSize">@dimen/ferrariLineUpTitle</item>
+    </style>
+
+    <style name="ferrariLineUpSubtitle">
+        <item name="android:fontFamily">@font/ferrari_sans_bold</item>
+        <item name="android:textSize">@dimen/ferrariLineUpSubtitle</item>
+    </style>
+
+    <style name="ferrariPin">
+        <item name="android:fontFamily">@font/ferrari_sans_regular</item>
+        <item name="android:textSize">@dimen/ferrariPin</item>
+    </style>
+
+    <style name="ferrariDayTitle">
+        <item name="android:fontFamily">@font/ferrari_sans_bold</item>
+        <item name="android:textSize">@dimen/ferrariDayTitle</item>
+    </style>
+
+    <style name="ferrariNewsTitle">
+        <item name="android:fontFamily">@font/ferrari_sans_medium</item>
+        <item name="android:textSize">@dimen/ferrariNewsTitle</item>
+    </style>
+
+    <style name="ferrariLargeTitle">
+        <item name="android:fontFamily">@font/ferrari_sans_regular</item>
+        <item name="android:textSize">@dimen/ferrariLargeTitle</item>
+    </style>
+
+    <style name="ferrariCounter">
+        <item name="android:fontFamily">@font/ferrari_sans_medium</item>
+        <item name="android:textSize">@dimen/ferrariCounter</item>
+    </style>
+
+    <style name="ferrariStats">
+        <item name="android:fontFamily">@font/ferrari_sans_regular</item>
+        <item name="android:textSize">@dimen/ferrariStats</item>
+    </style>
+
+    <style name="ferrariNavigationTitle">
+        <item name="android:fontFamily">@font/ferrari_sans_medium</item>
+        <item name="android:textSize">@dimen/ferrariNavigationTitle</item>
+    </style>
+
+    <style name="ferrariLargeBody">
+        <item name="android:fontFamily">@font/ferrari_sans_regular</item>
+        <item name="android:textSize">@dimen/ferrariLargeBody</item>
+    </style>
+
+    <style name="ferrariBody">
+        <item name="android:fontFamily">@font/ferrari_sans_regular</item>
+        <item name="android:textSize">@dimen/ferrariBody</item>
+    </style>
+
+    <style name="ferrariBodyBold">
+        <item name="android:fontFamily">@font/ferrari_sans_bold</item>
+        <item name="android:textSize">@dimen/ferrariStandardButton</item>
+    </style>
+
+    <style name="ferrariButtonBlock">
+        <item name="android:fontFamily">@font/ferrari_sans_regular</item>
+        <item name="android:textSize">@dimen/ferrariButtonBlock</item>
+    </style>
+
+    <style name="ferrariHeaderMedium">
+        <item name="android:fontFamily">@font/ferrari_sans_medium</item>
+        <item name="android:textSize">@dimen/ferrariHeaderMedium</item>
+    </style>
+
+    <style name="ferrariHeader">
+        <item name="android:fontFamily">@font/ferrari_sans_regular</item>
+        <item name="android:textSize">@dimen/ferrariHeader</item>
+    </style>
+
+    <style name="ferrariNewsTitleSmall">
+        <item name="android:fontFamily">@font/ferrari_sans_regular</item>
+        <item name="android:textSize">@dimen/ferrariNewsTitleSmall</item>
+    </style>
+
+    <style name="ferrariStandardButton">
+        <item name="android:fontFamily">@font/ferrari_sans_regular</item>
+        <item name="android:textSize">@dimen/ferrariStandardButton</item>
+    </style>
+
+    <style name="ferrariCategoryButton">
+        <item name="android:fontFamily">@font/ferrari_sans_regular</item>
+        <item name="android:textSize">@dimen/ferrariCategoryButton</item>
+    </style>
+
+    <style name="ferrariCallout">
+        <item name="android:fontFamily">@font/ferrari_sans_regular</item>
+        <item name="android:textSize">@dimen/ferrariCallout</item>
+    </style>
+
+    <style name="ferrariSubheadLine">
+        <item name="android:fontFamily">@font/ferrari_sans_medium</item>
+        <item name="android:textSize">@dimen/ferrariSubheadLine</item>
+    </style>
+
+    <style name="ferrariCaption">
+        <item name="android:fontFamily">@font/ferrari_sans_light</item>
+        <item name="android:textSize">@dimen/ferrariCaption</item>
+    </style>
+
+    <style name="ferrariProfileButton">
+        <item name="android:fontFamily">@font/ferrari_sans_regular</item>
+        <item name="android:textSize">@dimen/ferrariProfileButton</item>
+    </style>
+
+    <style name="ferrariTab">
+        <item name="android:fontFamily">@font/ferrari_sans_regular</item>
+        <item name="android:textSize">@dimen/ferrariTab</item>
+    </style>
+
+    <style name="ferrariFooterTab">
+        <item name="android:fontFamily">@font/ferrari_sans_regular</item>
+        <item name="android:textSize">@dimen/ferrariFooterTab</item>
+    </style>
+
+    <style name="ferrariFooter">
+        <item name="android:fontFamily">@font/ferrari_sans_regular</item>
+        <item name="android:textSize">@dimen/ferrariFooter</item>
+    </style>
+
+    <style name="ferrariEditorialBody">
+        <item name="android:fontFamily">@font/ferrari_sans_light</item>
+        <item name="android:textSize">@dimen/ferrariEditorialBody</item>
+    </style>
+
+    <style name="ferrariSmallFooter">
+        <item name="android:fontFamily">@font/ferrari_sans_regular</item>
+        <item name="android:textSize">@dimen/ferrariSmallFooter</item>
+    </style>
+
+    <style name="ferrariMediumBody">
+        <item name="android:fontFamily">@font/ferrari_sans_medium</item>
+        <item name="android:textSize">@dimen/ferrariMediumBody</item>
+    </style>
+
+    <style name="ferrariH2Light">
+        <item name="android:fontFamily">@font/ferrari_sans_regular</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="AppBottomSheetDialogTheme" parent="Theme.Material3.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheetDialogTheme</item>
+    </style>
+
+    <style name="BottomSheetDialogTheme" parent="Widget.Material3.BottomSheet">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:background">@drawable/rounded_dialog</item>
+        <!--
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryVariant</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary</item>
+
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorSecondaryVariant">@color/colorSecondaryVariant</item>
+        <item name="colorOnSecondary">@color/black</item>
+
+        <item name="android:textColor">@color/text_color</item>
+        -->
+    </style>
+
+    <style name="AppBottomSheetDialogThemeDark" parent="Theme.Material3.Dark.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheetDialogThemeDark</item>
+    </style>
+
+    <style name="BottomSheetDialogThemeDark" parent="Widget.Material3.BottomSheet.Modal">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:background">@drawable/rounded_dialog_dark</item>
+        <!--
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryVariant</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary</item>
+
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorSecondaryVariant">@color/colorSecondaryVariant</item>
+        <item name="colorOnSecondary">@color/black</item>
+
+        <item name="android:textColor">@color/text_color</item>
+        -->
+    </style>
+
+    <style name="AppBottomSheetDialogThemeLight" parent="Theme.Material3.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheetDialogThemeLight</item>
+    </style>
+
+    <style name="AppBottomSheetDialogThemeBle" parent="Theme.Material3.Dark.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BleBottomSheetDialogTheme</item>
+    </style>
+
+    <style name="BleBottomSheetDialogTheme" parent="Widget.Material3.BottomSheet.Modal">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:background">@drawable/rounded_dialog_ble</item>
+    </style>
+
+    <style name="BottomSheetDialogThemeLight" parent="Widget.Material3.BottomSheet.Modal">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:background">@drawable/rounded_dialog_light</item>
+        <!--
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryVariant</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary</item>
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorSecondaryVariant">@color/colorSecondaryVariant</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="android:textColor">@color/text_color</item>
+        -->
+    </style>
+
+    <style name="TripAppBottomSheetDialogTheme" parent="Theme.Material3.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/TripBottomSheetDialogTheme</item>
+    </style>
+
+    <style name="TripBottomSheetDialogTheme" parent="Widget.Material3.BottomSheet.Modal">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:background">@drawable/trip_rounded_dialog</item>
+    </style>
+
+    <style name="DialogThemeLightFullScreen" parent="Theme.Material3.Light.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:background">@drawable/rounded_dialog_light</item>
+
+    </style>
+
+    <style name="DialogThemeDark" parent="Theme.Material3.Dark.Dialog">
+        <item name="android:windowBackground">@color/background_color_dark</item>
+        <item name="android:background">@android:color/transparent</item>
+
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowIsFloating">false</item>
+
+    </style>
+
+    <style name="AlertDialogTheme" parent="Theme.Material3.Light.Dialog.Alert">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:background">@color/background_color</item>
+        <item name="colorAccent">@color/text_color</item>
+        <item name="android:textColorPrimary">@color/text_color</item>
+    </style>
+
+    <style name="Theme.PopupMenu" parent="Widget.AppCompat.PopupMenu">
+        <item name="android:fontFamily">@font/ferrari_sans_regular</item>
+        <item name="android:textSize">@dimen/ferrariCallout</item>
     </style>
 </resources>
