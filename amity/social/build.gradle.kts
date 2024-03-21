@@ -24,7 +24,7 @@ android {
 }
 dependencies {
     val amityMessagingSdkVersion: String by rootProject.extra
-    api(project(":common"))
+    implementation(project(":common"))
     implementation("androidx.legacy:legacy-support-v4:1.0.0")
 
     implementation("androidx.constraintlayout:constraintlayout:2.0.4")

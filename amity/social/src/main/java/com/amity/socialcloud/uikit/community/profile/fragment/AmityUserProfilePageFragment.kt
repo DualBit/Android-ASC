@@ -4,6 +4,7 @@ import android.content.DialogInterface
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.util.Log
 import android.view.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
@@ -41,7 +42,7 @@ import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.core.BackpressureStrategy
 import io.reactivex.rxjava3.schedulers.Schedulers
 import io.reactivex.rxjava3.subjects.PublishSubject
-import timber.log.Timber
+//import timber.log.Timber
 
 const val ARG_USER_ID = "ARG_USER_ID"
 
@@ -277,7 +278,7 @@ class AmityUserProfilePageFragment : AmityBaseFragment(),
                         binding.fabCreatePost.visibility =
                             if (viewModel.isSelfUser()) View.VISIBLE else View.GONE
                     }, {
-                        Timber.d(TAG, it.message)
+                        Log.d(TAG, it.message ?: "")
                     })
             )
         }
@@ -291,7 +292,7 @@ class AmityUserProfilePageFragment : AmityBaseFragment(),
                     binding.userProfileHeader.setMyFollowInfo(it)
                 },
                 onError = {
-                    Timber.e(TAG, "getMyFollowInfo: ${it.localizedMessage}")
+                    Log.e(TAG, "getMyFollowInfo: ${it.localizedMessage}")
                 }
             ).untilLifecycleEnd(this)
                 .subscribe()
@@ -301,7 +302,7 @@ class AmityUserProfilePageFragment : AmityBaseFragment(),
                     binding.userProfileHeader.setUserFollowInfo(it)
                 },
                 onError = {
-                    Timber.e(TAG, "getUserFollowInfo: ${it.localizedMessage}")
+                    Log.e(TAG, "getUserFollowInfo: ${it.localizedMessage}")
                 }
             ).untilLifecycleEnd(this)
                 .subscribe()

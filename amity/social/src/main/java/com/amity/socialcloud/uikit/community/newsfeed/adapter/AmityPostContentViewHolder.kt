@@ -2,6 +2,7 @@ package com.amity.socialcloud.uikit.community.newsfeed.adapter
 
 import android.text.Spannable
 import android.text.SpannableString
+import android.util.Log
 import android.view.View
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
@@ -14,7 +15,7 @@ import com.amity.socialcloud.uikit.community.newsfeed.events.PollVoteClickEvent
 import com.amity.socialcloud.uikit.community.newsfeed.events.PostContentClickEvent
 import com.amity.socialcloud.uikit.community.newsfeed.listener.AmityMentionClickableSpan
 import io.reactivex.rxjava3.subjects.PublishSubject
-import timber.log.Timber
+//import timber.log.Timber
 
 open class AmityPostContentViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
@@ -72,7 +73,7 @@ open class AmityPostContentViewHolder(itemView: View) : RecyclerView.ViewHolder(
                         mentionUserItem.getIndex().plus(mentionUserItem.getLength()).inc(),
                         Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
                 } catch (exception: IndexOutOfBoundsException) {
-                    Timber.e("AmityPostContentViewHolder", "Highlight text user mentions crashes")
+                    Log.e("AmityPostContentView", "Highlight text user mentions crashes")
                 }
             }
         }

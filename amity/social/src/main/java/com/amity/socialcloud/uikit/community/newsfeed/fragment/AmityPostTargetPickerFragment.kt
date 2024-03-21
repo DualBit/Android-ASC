@@ -29,7 +29,7 @@ import com.amity.socialcloud.uikit.community.utils.EXTRA_PARAM_POST_CREATION_TYP
 import com.bumptech.glide.Glide
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.schedulers.Schedulers
-import timber.log.Timber
+//import timber.log.Timber
 
 @UnstableApi
 class AmityPostTargetPickerFragment : AmityBaseFragment(),
@@ -159,7 +159,7 @@ class AmityPostTargetPickerFragment : AmityBaseFragment(),
                 communityAdapter.submitData(lifecycle, it)
                 binding.separator.visibility = View.VISIBLE
                 binding.tvCommunityLabel.visibility = View.VISIBLE
-                Timber.e(">>>>>>>>>>>>>adapter: ${communityAdapter.snapshot().size}")
+//                Timber.e(">>>>>>>>>>>>>adapter: ${communityAdapter.snapshot().size}")
             }.doOnError {
                 Log.e(TAG, "initRecyclerView: ${it.localizedMessage}")
             }.subscribe()

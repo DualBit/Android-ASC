@@ -22,7 +22,7 @@ import io.reactivex.rxjava3.subjects.BehaviorSubject
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import timber.log.Timber
+//import timber.log.Timber
 
 class AmityCommunityProfileViewModel(private val savedState: SavedStateHandle) :
     AmityBaseViewModel(), PermissionViewModel {
@@ -148,7 +148,7 @@ class AmityCommunityProfileViewModel(private val savedState: SavedStateHandle) :
                 onLoaded.invoke(it)
             }
             .doOnError {
-                Timber.e(it)
+//                Timber.e(it)
             }
             .ignoreElements()
     }

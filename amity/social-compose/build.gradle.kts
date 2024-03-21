@@ -47,6 +47,7 @@ dependencies {
 //    implementation 'androidx.compose.runtime:runtime-livedata'
     // Optional - Integration with RxJava
 //    implementation 'androidx.compose.runtime:runtime-rxjava2'
+    implementation("com.jakewharton.timber:timber:4.7.1")
 
     // image loading
     implementation("io.coil-kt:coil-compose:2.4.0")

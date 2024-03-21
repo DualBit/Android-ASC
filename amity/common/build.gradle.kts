@@ -18,7 +18,7 @@ android {
 }
 dependencies {
     implementation("commons-io:commons-io:2.6")
-    api("com.jakewharton.timber:timber:4.7.1")
+    implementation("com.jakewharton.timber:timber:4.7.1")
 
     implementation("org.jsoup:jsoup:1.16.1")
     implementation("com.squareup.okhttp3:okhttp:4.11.0")

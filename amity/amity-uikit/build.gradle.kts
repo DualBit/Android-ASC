@@ -32,8 +32,8 @@ android {
 
 dependencies {
     val amityMessagingSdkVersion: String by rootProject.extra
-    api(project(":social"))
-    api(project(":chat"))
-    api("com.github.AmityCo.Amity-Social-Cloud-SDK-Android:amity-sdk:$amityMessagingSdkVersion")
+    implementation(project(":social"))
+    implementation(project(":chat"))
+    implementation("com.github.AmityCo.Amity-Social-Cloud-SDK-Android:amity-sdk:$amityMessagingSdkVersion")
     implementation(project(":social-compose"))
 }

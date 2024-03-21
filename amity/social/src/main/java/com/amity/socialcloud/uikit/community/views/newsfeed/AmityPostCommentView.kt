@@ -4,6 +4,7 @@ import android.content.Context
 import android.text.Spannable
 import android.text.SpannableString
 import android.util.AttributeSet
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import androidx.constraintlayout.widget.ConstraintLayout
@@ -27,7 +28,7 @@ import com.amity.socialcloud.uikit.community.newsfeed.events.CommentOptionClickE
 import com.amity.socialcloud.uikit.community.newsfeed.events.ReactionCountClickEvent
 import com.amity.socialcloud.uikit.community.newsfeed.listener.AmityMentionClickableSpan
 import io.reactivex.rxjava3.subjects.PublishSubject
-import timber.log.Timber
+//import timber.log.Timber
 
 class AmityPostCommentView : ConstraintLayout {
 
@@ -237,7 +238,7 @@ class AmityPostCommentView : ConstraintLayout {
                         Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
                     )
                 } catch (exception: IndexOutOfBoundsException) {
-                    Timber.e("AmityPostCommentView", "Highlight text user mentions crashes")
+                    Log.e("AmityPostCommentView", "Highlight text user mentions crashes")
                 }
             }
         }

@@ -57,7 +57,6 @@ import io.reactivex.rxjava3.schedulers.Schedulers
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import timber.log.Timber
 import java.io.File
 
 class AmityChatRoomWithDefaultComposeBarFragment : AmityPickerFragment(),
@@ -625,7 +624,7 @@ class AmityChatRoomWithDefaultComposeBarFragment : AmityPickerFragment(),
         try {
             latestMessageObserver.apply { mAdapter.unregisterAdapterDataObserver(this) }
         } catch (e: IllegalStateException) {
-            Timber.e(e)
+//            Timber.e(e)
         }
     }
 

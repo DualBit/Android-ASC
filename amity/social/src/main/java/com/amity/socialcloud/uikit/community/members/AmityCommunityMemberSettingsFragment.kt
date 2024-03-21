@@ -16,7 +16,7 @@ import com.amity.socialcloud.uikit.common.utils.AmityConstants
 import com.amity.socialcloud.uikit.community.R
 import com.amity.socialcloud.uikit.community.databinding.AmityFragmentCommunityMemberSettingsBinding
 import com.ekoapp.rxlifecycle.extension.untilLifecycleEnd
-import timber.log.Timber
+//import timber.log.Timber
 
 private const val ARG_COMMUNITY_ID = "ARG_COMMUNITY_ID"
 private const val ARG_IS_MEMBER = "ARG_IS_MEMBER"
@@ -118,10 +118,10 @@ class AmityCommunityMemberSettingsFragment : AmityBaseFragment() {
                     requireActivity().finish()
                 }
             } else {
-                Timber.e(exception)
+//                Timber.e(exception)
             }
         } else {
-            Timber.e(exception)
+//            Timber.e(exception)
         }
     }
 

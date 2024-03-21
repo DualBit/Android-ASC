@@ -1,11 +1,13 @@
 package com.amity.socialcloud.uikit.community.ui.view
 
 import android.Manifest
+import android.annotation.SuppressLint
 import android.content.DialogInterface
 import android.content.Intent
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
@@ -34,7 +36,7 @@ import com.trello.rxlifecycle4.components.support.RxFragment
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.disposables.CompositeDisposable
 import io.reactivex.rxjava3.schedulers.Schedulers
-import timber.log.Timber
+//import timber.log.Timber
 
 abstract class AmityCommunityCreateBaseFragment : RxFragment() {
 
@@ -128,6 +130,7 @@ abstract class AmityCommunityCreateBaseFragment : RxFragment() {
     open fun renderAvatar() {
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     private fun setAvatar() {
 
         renderAvatar()
@@ -136,21 +139,19 @@ abstract class AmityCommunityCreateBaseFragment : RxFragment() {
             pickImage()
         }
 
-        (binding.ccName as View).setOnTouchListener(object : View.OnTouchListener {
-            override fun onTouch(v: View?, event: MotionEvent?): Boolean {
-                val DRAWABLE_LEFT = 0
-                val DRAWABLE_TOP = 1
-                val DRAWABLE_RIGHT = 2
-                val DRAWABLE_BOTTOM = 3
+        (binding.ccName as View).setOnTouchListener { v, event ->
+            val DRAWABLE_LEFT = 0
+            val DRAWABLE_TOP = 1
+            val DRAWABLE_RIGHT = 2
+            val DRAWABLE_BOTTOM = 3
 
-                if (event?.action == MotionEvent.ACTION_UP) {
-                    if (event.rawX >= (binding.ccName.right - binding.ccName.compoundDrawables[DRAWABLE_RIGHT].bounds.width())) {
-                        viewModel.communityName.set("")
-                    }
+            if (event?.action == MotionEvent.ACTION_UP) {
+                if (event.rawX >= (binding.ccName.right - binding.ccName.compoundDrawables[DRAWABLE_RIGHT].bounds.width())) {
+                    viewModel.communityName.set("")
                 }
-                return false
             }
-        })
+            false
+        }
 
         (binding.etDescription as View).setOnTouchListener(object : View.OnTouchListener {
             override fun onTouch(v: View?, event: MotionEvent?): Boolean {
@@ -182,7 +183,7 @@ abstract class AmityCommunityCreateBaseFragment : RxFragment() {
                 requireActivity().finish()
             }
             .doOnError {
-                Timber.e(TAG, "createCommunity: ${it.localizedMessage}")
+                Log.e(TAG, "createCommunity: ${it.localizedMessage}")
             }.subscribe()
         )
     }
@@ -258,7 +259,7 @@ abstract class AmityCommunityCreateBaseFragment : RxFragment() {
                         }
                     }
                 }.doOnError {
-                    Timber.e(TAG, "uploadImageAndCreateCommunity: ${it.localizedMessage}")
+                    Log.e(TAG, "uploadImageAndCreateCommunity: ${it.localizedMessage}")
                     binding.btnCreateCommunity.isEnabled = true
                     viewModel.initialStateChanged.set(true)
                 }.subscribe()
@@ -305,7 +306,7 @@ abstract class AmityCommunityCreateBaseFragment : RxFragment() {
                     startActivity(intent)
                 }
             }.doOnError {
-                Timber.e(TAG, "checkUserRole: ${it.localizedMessage}")
+                Log.e(TAG, "checkUserRole: ${it.localizedMessage}")
             }.subscribe()
         )
     }

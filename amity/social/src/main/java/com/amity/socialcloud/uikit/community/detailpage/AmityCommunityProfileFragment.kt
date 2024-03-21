@@ -34,7 +34,7 @@ import com.ekoapp.rxlifecycle.extension.untilLifecycleEnd
 import com.trello.rxlifecycle4.components.support.RxFragment
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.schedulers.Schedulers
-import timber.log.Timber
+//import timber.log.Timber
 import java.util.UUID
 
 class AmityCommunityProfileFragment : RxFragment() {
@@ -197,7 +197,7 @@ class AmityCommunityProfileFragment : RxFragment() {
                 binding.tvPostCount.text = it.toDouble().formatCount()
             }
             .doOnError {
-                Timber.e(it)
+//                Timber.e(it)
             }
             .untilLifecycleEnd(this, communityProfileComposer)
             .subscribe()
@@ -237,7 +237,7 @@ class AmityCommunityProfileFragment : RxFragment() {
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .doOnError {
-                Timber.e(TAG, it)
+//                Timber.e(TAG, it)
             }
             .untilLifecycleEnd(this)
             .subscribe()

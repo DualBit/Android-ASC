@@ -138,8 +138,12 @@ dependencies {
 
     // Amity
     implementation("com.github.AmityCo.Amity-Social-Cloud-SDK-Android:amity-push-fcm:6.26.0")
-    implementation(project(":amity-uikit"))
 //    implementation("org.objenesis:objenesis:3.2")
+    implementation(project(":amity-uikit"))
+    implementation(project(":common"))
+    implementation(project(":chat"))
+    implementation(project(":social"))
+    implementation(project(":social-compose"))
 
     testImplementation(TestLibs.junit)
     androidTestImplementation(AndroidXTestLibs.junit)
