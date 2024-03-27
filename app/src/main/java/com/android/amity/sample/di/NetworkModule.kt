@@ -1,7 +1,8 @@
 package com.android.amity.sample.di
 
-import com.android.amity.sample.BuildConfig
+
 import com.android.amity.sample.datastore.ISharedPrefDataStore
+import com.android.asc.amity.BuildConfig
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

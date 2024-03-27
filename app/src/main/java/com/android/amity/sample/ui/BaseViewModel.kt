@@ -2,7 +2,6 @@ package com.android.amity.sample.ui
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.android.amity.sample.R
 import com.android.amity.sample.di.MainDispatcher
 import com.android.amity.sample.di.ResourceModule
 import com.android.amity.sample.ui.route.Event
@@ -10,6 +9,7 @@ import com.android.amity.sample.ui.route.EventManager
 import com.android.amity.sample.ui.route.NavigationBack
 import com.android.amity.sample.ui.route.SnackbarEvent
 import com.android.amity.sample.util.loge
+import com.android.asc.amity.R
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.launch
 

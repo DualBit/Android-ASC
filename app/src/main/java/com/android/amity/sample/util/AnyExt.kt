@@ -3,7 +3,8 @@ package com.android.amity.sample.util
 import android.content.Context
 import android.util.Log
 import android.widget.Toast
-import com.android.amity.sample.BuildConfig
+import com.android.asc.amity.BuildConfig
+
 
 fun Any.logd(message: String){
     if (BuildConfig.DEBUG) {

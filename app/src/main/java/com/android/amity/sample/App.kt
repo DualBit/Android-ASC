@@ -4,6 +4,7 @@ import android.app.Application
 import dagger.hilt.android.HiltAndroidApp
 import com.amity.socialcloud.sdk.api.core.AmityCoreClient
 import com.amity.socialcloud.sdk.api.core.endpoint.AmityEndpoint
+import com.android.asc.amity.BuildConfig
 
 @HiltAndroidApp
 class App : Application() {
